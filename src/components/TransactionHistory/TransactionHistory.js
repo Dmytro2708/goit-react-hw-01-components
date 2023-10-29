@@ -1,24 +1,25 @@
+import { Table, Thead, Tr, Td } from './TransactionHistory.styled';
+
 export const TransactionHistory = ({ items }) => {
-    return (
-        <table>
-  <thead>
-    <tr>
-      <th>Type</th>
-      <th>Amount</th>
-      <th>Currency</th>
-    </tr>
-  </thead>
-
-
-  <tbody>
-  {items.map(item => (
-        <tr key={item.id}>
-          <td>{item.type}</td>
-          <td>{item.amount}</td>
-          <td>{item.currency}</td>
+  return (
+    <Table>
+      <Thead>
+        <tr>
+          <th>Type</th>
+          <th>Amount</th>
+          <th>Currency</th>
         </tr>
-      ))}
-  </tbody>
-</table>
-    )
-}
+      </Thead>
+
+      <tbody>
+        {items.map(item => (
+          <Tr key={item.id}>
+            <Td>{item.type}</Td>
+            <Td>{item.amount}</Td>
+            <Td>{item.currency}</Td>
+          </Tr>
+        ))}
+      </tbody>
+    </Table>
+  );
+};
