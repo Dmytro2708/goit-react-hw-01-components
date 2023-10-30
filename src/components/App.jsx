@@ -10,25 +10,8 @@ import friends from './FriendList/friends.json';
 import { TransactionHistory } from './TransactionHistory/TransactionHistory'
 import transactions from './TransactionHistory/transactions.json';
 
-// import styled from 'styled-components';
 import { GlobalStyle } from './GlobalStyle';
 
-
-// const PageTitle = styled.h1`
-// margin-top: 0px;
-// margin-bottom: 20px;
-// text-align: center;
-// background-color: ${(props) => {
-// switch (props.$variant) {
-//   case "primary":
-//     return "orange";
-// case "secondary":
-//   return "red";
-//   default:
-//     return "blue"
-// };
-// } };
-// `;
 
 
 export const App = () => {
@@ -42,7 +25,7 @@ export const App = () => {
         stats={user.stats}
       />
 
-      <Statistics title="Upload stats" stats={data} />
+      <Statistics stats={data} />
       <FriendList friends={friends} />
       <TransactionHistory items={transactions} />
       <GlobalStyle/>

@@ -7,10 +7,10 @@ import {
   StatListItemPercentage,
 } from './Statistics.styled';
 
-export const Statistics = ({ title, stats }) => {
+export const Statistics = ({ stats }) => {
   return (
     <StatCard>
-      <Title>{title}</Title>
+      <Title>Upload stats</Title>
       <StatList>
         {stats.map(stat => (
           <StatListItem key={stat.id}>
